@@ -1,21 +1,26 @@
-## Learning Laravel
+# Development Environment
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Create `.env`
+- Create or copy `.env` file in the project root.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Create Database Schema
+- Use any client to create a database schema named `laravel-vue-composition-api`.
 
-
-## Steps while creating projects
 
 ## Migration
-// editing .env file here
+```
 composer install
 php artisan migrate
+```
 
-## Install Breeze
-composer require laravel/breeze
-php artisan breeze:install
-npm install && npm run dev
+## (For Dev) To build Vue's js files with every change
+```
+npm run watch
+```
 
-## Create Model with migration
-php artisan make:model Company -m
+
+## (For Dev) Hot Module Replacement
+```
+npm run hot
+```
+***Note:*** if HMR is used during development, remember to re-build js files by running `npm run development` or `npm run production`
